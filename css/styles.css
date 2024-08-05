@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -31,6 +31,7 @@ nav {
 
 .nav-right {
     display: flex;
+    margin-left: auto;
 }
 
 main {
@@ -48,6 +49,8 @@ main {
 
 .content {
     max-width: 600px;
+    border: 1px solid #000;
+    padding: 20px;
 }
 
 h1, h2, p {
