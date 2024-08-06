@@ -67,7 +67,7 @@ main {
     border: 1px solid #000;
 }
 
-.research-interests, .research-papers {
+.research-interests, .research-papers, .talks {
     margin-bottom: 20px;
 }
 
@@ -135,4 +135,11 @@ p {
     font-size: 1em;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
