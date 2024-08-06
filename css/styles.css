@@ -67,6 +67,24 @@ main {
     border: 1px solid #000;
 }
 
+.research-interests, .research-papers {
+    margin-bottom: 20px;
+}
+
+.research-papers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.research-papers li h3 {
+    margin: 0.5em 0 0.2em;
+}
+
+.research-papers li p {
+    margin: 0;
+}
+
+
 .project {
     margin-bottom: 20px;
 }
@@ -116,3 +134,5 @@ h3 {
 p {
     font-size: 1em;
 }
+
+
