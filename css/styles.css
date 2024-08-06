@@ -80,20 +80,20 @@ main {
     flex: 1;
 }
 
-.research-interests, .research-papers, .talks {
+.research-interests, .research-papers, .talks, .cv-section {
     margin-bottom: 20px;
 }
 
-.research-papers ul {
+.research-papers ul, .cv-section ul {
     list-style: none;
     padding: 0;
 }
 
-.research-papers li h3 {
+.research-papers li h3, .cv-section li h3 {
     margin: 0.5em 0 0.2em;
 }
 
-.research-papers li p {
+.research-papers li p, .cv-section li p {
     margin: 0;
 }
 
