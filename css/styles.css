@@ -49,8 +49,8 @@ main {
     border: 1px solid #000;
     padding: 20px;
     width: 100%;
+    max-width: 1200px;
 }
-
 
 .content {
     max-width: 800px;
@@ -61,17 +61,20 @@ main {
 .profile {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .profile-pic {
     max-width: 150px;
     height: auto;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .profile-info {
     padding: 20px;
     border: 1px solid #000;
+    flex: 1;
 }
 
 .research-interests, .research-papers, .talks {
@@ -91,7 +94,6 @@ main {
     margin: 0;
 }
 
-
 .project {
     margin-bottom: 20px;
 }
@@ -100,14 +102,8 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 20px;
+    flex-wrap: wrap;
 }
-
-/* .project-info-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-} */
 
 .project-info img {
     max-width: 150px;
@@ -149,4 +145,59 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-item {
+        padding: 5px;
+        margin: 0 2px;
+    }
+
+    .project-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-info img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .content-box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .nav-item {
+        padding: 3px;
+        margin: 0 1px;
+    }
 }
