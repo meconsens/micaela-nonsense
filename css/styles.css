@@ -52,8 +52,6 @@ main {
     border: 1px solid #000;
     padding: 20px;
     text-align: left;
-    display: flex;
-    align-items: center;
 }
 
 .profile {
@@ -69,8 +67,34 @@ main {
 }
 
 .profile-info {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.project-info img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    /* border: 1px solid #000; */
+}
+
+.project-info div {
+    flex: 1;
+}
+
+.project-info h3 {
+    margin-top: 0;
 }
 
 h1, h2, h3, p {
@@ -84,6 +108,7 @@ h1 {
 h2 {
     font-size: 1.5em;
 }
+
 
 h3 {
     font-size: 1.2em;
