@@ -45,31 +45,31 @@
       <!-- Page Header -->
       <div class="page-header">
         <h1>Research</h1>
-        <p>My work sits at the intersection of machine learning and genomics. One of the main questions I want to answer is: <em>can we build self-supervised genomic models that encode interpretable biological structure?</em> Or to put it another way: can we use self-supervised learning as a method of biological discovery?</p>
+        <p>One of the main questions I want to answer is: can we build self-supervised genomic models that encode interpretable biological structure? Or to put it another way: <em>can we use self-supervised learning as a method for biological discovery?</em></p>
         <p>My research involves interpreting what biological signals are captured in learned genomic representations, understanding why those signals are distributed and hard to fully disentangle, and using those findings to design pre-training objectives that build in biological structure from the start.</p>
         <p style="margin-top:0.5rem;margin-bottom:0;">
           <a href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">View full publication list on Google Scholar →</a>
         </p>
       </div>
 
-      <!-- Research Aims -->
-      <section class="research-aims section-gap">
-        <h2>Research</h2>
-
-        <div class="aim">
-          <div class="aim-tag">Aim 01</div>
-          <h3>Diagnosing biological structure in self-supervised genomic models</h3>
-        </div>
-
-        <div class="aim">
-          <div class="aim-tag">Aim 02</div>
-          <h3>Incorporating biological structure into pre-training objectives</h3>
-        </div>
-      </section>
-
       <!-- Papers -->
       <section class="papers-section section-gap">
         <h2>Publications</h2>
+
+        <div class="paper-card">
+          <div class="paper-meta">
+            <span class="paper-year">2026</span>
+            <span class="paper-venue">bioRxiv</span>
+          </div>
+          <h3>Predicting evolutionary rate as a pretraining task improves genome language model representations</h3>
+          <details class="abstract-details">
+            <summary></summary>
+            <p class="paper-abstract">Genome language models (gLM) have the potential to further understanding of regulatory genomics without requiring labeled data. Most gLMs are pretrained using sequence reconstruction tasks inspired by natural language processing, but recent studies have shown that these gLMs often fail to capture biological signal. To overcome this, we introduce pretraining tasks that predict the rate of evolution. These tasks are designed so that they can be composed with sequence reconstruction, enabling a controlled comparison of predicting sequence only, evolutionary rate only, or both. To address gaps in existing evaluations, we developed a suite of biologically grounded benchmarks. Across these tasks, and for established variant effect prediction benchmarks, models pretrained on both sequence and evolutionary rate outperform those trained on sequence alone, and training on evolutionary rate can make even the relatively small models in our work competitive with much larger existing gLMs for some tasks. These results establish evolution as a key training target for genome-scale models.</p>
+          </details>
+          <div class="paper-links">
+            <a class="paper-link" href="https://www.biorxiv.org/content/10.64898/2026.02.02.703275v1.abstract" target="_blank" rel="noopener">bioRxiv</a>
+          </div>
+        </div>
 
         <div class="paper-card">
           <div class="paper-meta">
