@@ -180,6 +180,15 @@ main {
   padding: 3rem 2rem 4rem;
 }
 
+/* Homepage: vertically center content in viewport */
+.home-main {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 56px);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .content {
   max-width: var(--max-w);
 }
@@ -193,14 +202,12 @@ main {
   align-items: flex-start;
   gap: 2.5rem;
   margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 140px;
-  height: 140px;
+  width: 165px;
+  height: 165px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -255,8 +262,6 @@ main {
 /* Highlights strip */
 .highlights {
   margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border);
 }
 
 .highlights h2 {
@@ -888,15 +893,11 @@ footer {
     padding: 2rem 1.25rem 3rem;
   }
 
+
   .profile {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.5rem;
-  }
-
-  .profile-info {
-    min-width: unset;
   }
 
   .profile-social {
