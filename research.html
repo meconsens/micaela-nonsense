@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Micaela Consens</title>
-  <meta name="description" content="Research by Micaela Consens on genome language model interpretability, biologically-informed pre-training, and multimodal genomic alignment.">
+  <meta name="description" content="Research by Micaela Consens on genome language model interpretability and biologically-informed pre-training.">
   <meta name="author" content="Micaela Elisa Consens">
 
   <!-- Open Graph -->
@@ -59,19 +59,11 @@
         <div class="aim">
           <div class="aim-tag">Aim 01</div>
           <h3>Diagnosing biological structure in self-supervised genomic models</h3>
-          <p>Self-supervised genomic models achieve strong downstream performance, but we largely can't explain why. I develop frameworks to interpret what biological signals are actually encoded in learned representations — correlating attention patterns and gradient-based scores with known biological annotations (TATA boxes, transcription factor binding sites, evolutionary conservation). The goal isn't just to identify which heads do what post-hoc, but to understand how biological structure is acquired across training stages, and why it remains distributed and hard to fully interpret. That diagnosis directly motivates the rest of my work.</p>
         </div>
 
         <div class="aim">
           <div class="aim-tag">Aim 02</div>
           <h3>Incorporating biological structure into pre-training objectives</h3>
-          <p>Standard language modeling objectives were designed for natural language. Genomic sequences have a fundamentally different structure — evolutionary conservation, functional constraint, regulatory grammar. Rather than adapting NLP pre-training verbatim, I design objectives that treat biological structure as a training signal. My evolutionary rate prediction tasks (CEP and MEM) ask models to predict how fast each position evolves, explicitly incorporating the evolutionary constraints that define functional regions. These tasks are composable with sequence reconstruction objectives, improving representation quality on zero-shot biological benchmarks without requiring labeled data.</p>
-        </div>
-
-        <div class="aim">
-          <div class="aim-tag">Aim 03</div>
-          <h3>Interpretability by design</h3>
-          <p>Post-hoc interpretability is inherently limited — you can characterize a black box, but you can't change what it learned. I'm interested in whether we can build models where interpretability is a property of the architecture itself, rather than something layered on afterward. This involves designing training objectives and inductive biases that ground representations in known biological relationships from the outset, so that what a model learns is legible by construction.</p>
         </div>
       </section>
 
@@ -85,10 +77,10 @@
             <span class="paper-venue">bioRxiv</span>
           </div>
           <h3>Interpreting Attention Mechanisms in Genomic Transformer Models: A Framework for Biological Insights</h3>
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
-          <div class="abstract-body">
+          <details class="abstract-details">
+            <summary></summary>
             <p class="paper-abstract">Transformer models have shown strong performance on biological sequence prediction tasks, but the interpretability of their internal mechanisms remains underexplored. Given their application in biomedical research, understanding the mechanisms behind these models' predictions is crucial for their widespread adoption. We introduce a method to interpret attention heads in genomic transformers by correlating per-token attention scores with curated biological annotations, and we use GPT-4 to summarize each head's focus. Applying this to DNABERT, Nucleotide Transformer, and scGPT, we find that attention heads learn biologically meaningful associations during self-supervised pre-training and that these associations shift with fine-tuning. We show that interpretability varies with tokenization scheme, and that context-dependence plays a key role in head behaviour. Through ablation, we demonstrate that heads strongly associated with biological features are more important for task performance than uninformative heads in the same layers. In DNABERT trained for TATA promoter prediction, we observe heads with positive and negative associations reflecting positive and negative learning dynamics. Our results offer a framework to trace how biological features are learned from random initialization to pre-training to fine-tuning, enabling insight into how genomic foundation models represent nucleotides, genes, and cells.</p>
-          </div>
+          </details>
           <div class="paper-links">
             <a class="paper-link" href="https://www.biorxiv.org/content/10.1101/2025.06.26.661544v1" target="_blank" rel="noopener">bioRxiv</a>
           </div>
@@ -100,10 +92,10 @@
             <span class="paper-venue">Nature Machine Intelligence</span>
           </div>
           <h3>Transformers and genome language models</h3>
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
-          <div class="abstract-body">
+          <details class="abstract-details">
+            <summary></summary>
             <p class="paper-abstract">Large language models based on the transformer deep learning architecture have revolutionized natural language processing. Motivated by the analogy between human language and the genome's biological code, researchers have begun to develop genome language models (gLMs) based on transformers and related architectures. This Review explores the use of transformers and language models in genomics. We survey open questions in genomics amenable to the use of gLMs, and motivate the use of gLMs and the transformer architecture for these problems. We discuss the potential of gLMs for modelling the genome using unsupervised pretraining tasks, specifically focusing on the power of zero- and few-shot learning. We explore the strengths and limitations of the transformer architecture, as well as the strengths and limitations of current gLMs more broadly. Additionally, we contemplate the future of genomic modelling beyond the transformer architecture, based on current trends in research. This Review serves as a guide for computational biologists and computer scientists interested in transformers and language models for genomic data.</p>
-          </div>
+          </details>
           <div class="paper-links">
             <a class="paper-link" href="https://www.nature.com/articles/s42256-025-01007-9" target="_blank" rel="noopener">Nature Machine Intelligence</a>
           </div>
@@ -115,10 +107,10 @@
             <span class="paper-venue">ICML CompBio Workshop</span>
           </div>
           <h3>Transforming Genomic Interpretability: A DNABERT Case Study</h3>
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
-          <div class="abstract-body">
+          <details class="abstract-details">
+            <summary></summary>
             <p class="paper-abstract">While deep learning algorithms, particularly transformers, have recently shown significant promise in making predictions from biological sequences, their interpretability in the context of biology has not been deeply explored. This paper focuses on the recently proposed DNABERT model and explores interpreting its decisions using modified Layer-wise Relevance Propagation (LRP) methods to determine what the model is learning. This score is then compared to several other interpretability methods commonly applied to transformers, including the attention-score based method proposed by the DNABERT authors. Results of mutagenesis experiments targeting regions identified by different methods show the modified LRP interpretability scores can outperform others at 20 mutations, and also show attention cannot reliably outperform random scores.</p>
-          </div>
+          </details>
           <div class="paper-links">
             <a class="paper-link" href="https://icml-compbio.github.io/2023/papers/WCBICML2023_paper118.pdf" target="_blank" rel="noopener">Workshop Paper</a>
           </div>
@@ -130,10 +122,10 @@
             <span class="paper-venue">Frontiers in Molecular Neuroscience</span>
           </div>
           <h3>Bulk and single-nucleus transcriptomics highlight intra-telencephalic and somatostatin neurons in Alzheimer's disease</h3>
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
-          <div class="abstract-body">
+          <details class="abstract-details">
+            <summary></summary>
             <p class="paper-abstract">Cortical neuron loss is a pathological hallmark of late-onset Alzheimer's disease (AD). However, it remains unclear which neuronal subtypes beyond broad excitatory and inhibitory classes are most vulnerable. Here, we analyzed cell subtype proportion differences in AD compared to non-AD controls using 1037 post-mortem brain samples from six neocortical regions. We identified the strongest associations of AD with fewer somatostatin (SST) inhibitory neurons and intra-telencephalic (IT) excitatory neurons. Replication in three AD case-control single-nucleus RNAseq datasets most strongly supported the bulk tissue association of fewer SST neurons in AD. In depth analyses of cell type proportions with specific AD-related neuropathological and cognitive phenotypes revealed fewer SST neurons with greater brain-wide post-mortem tau and beta amyloid, as well as a faster rate of antemortem cognitive decline. In contrast, greater IT neuron proportions were associated with a slower rate of cognitive decline as well as greater residual cognition — a measure of cognitive resilience — but not canonical AD neuropathology. Our findings implicate somatostatin inhibitory and intra-telencephalic excitatory neuron subclasses in the pathogenesis of AD and in cognitive resilience to AD pathology, respectively.</p>
-          </div>
+          </details>
           <div class="paper-links">
             <a class="paper-link" href="https://www.frontiersin.org/journals/molecular-neuroscience/articles/10.3389/fnmol.2022.903175/full" target="_blank" rel="noopener">Frontiers</a>
           </div>
@@ -187,12 +179,5 @@
     </div>
   </footer>
 
-  <script>
-    function toggleAbstract(btn) {
-      const body = btn.nextElementSibling;
-      const isOpen = body.classList.toggle('open');
-      btn.textContent = isOpen ? 'Hide abstract ↑' : 'Show abstract ↓';
-    }
-  </script>
 </body>
 </html>
