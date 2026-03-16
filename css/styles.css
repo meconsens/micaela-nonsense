@@ -360,15 +360,15 @@ main {
 }
 
 /* Research Thrusts */
-.research-thrusts {
+.research-aims {
   margin-bottom: 3rem;
 }
 
-.research-thrusts h2 {
+.research-aims h2 {
   margin-bottom: 1.5rem;
 }
 
-.thrust {
+.aim {
   margin-bottom: 2rem;
   padding: 1.4rem 1.5rem;
   border: 1px solid var(--border);
@@ -377,7 +377,7 @@ main {
   position: relative;
 }
 
-.thrust::before {
+.aim::before {
   content: '';
   position: absolute;
   left: 0;
@@ -388,7 +388,7 @@ main {
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
-.thrust-tag {
+.aim-tag {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--green);
@@ -397,12 +397,12 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.thrust h3 {
+.aim h3 {
   font-size: 1rem;
   margin-bottom: 0.6rem;
 }
 
-.thrust p {
+.aim p {
   font-size: 0.9rem;
   margin-bottom: 0;
 }

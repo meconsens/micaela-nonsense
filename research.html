@@ -45,32 +45,33 @@
       <!-- Page Header -->
       <div class="page-header">
         <h1>Research</h1>
-        <p>My work sits at the intersection of machine learning and genomics. The central question I keep returning to: <em>can we build self-supervised genomic models that encode interpretable biological structure, rather than operating as black boxes that require extensive fine-tuning to work?</em> The three research thrusts below represent my approach to answering it.</p>
+        <p>My work sits at the intersection of machine learning and genomics. One of the main questions I want to answer is: <em>can we build self-supervised genomic models that encode interpretable biological structure?</em> Or to put it another way: can we use self-supervised learning as a method of biological discovery?</p>
+        <p>My research involves interpreting what biological signals are captured in learned genomic representations, understanding why those signals are distributed and hard to fully disentangle, and using those findings to design pre-training objectives that build in biological structure from the start.</p>
         <p style="margin-top:0.5rem;margin-bottom:0;">
           <a href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">View full publication list on Google Scholar →</a>
         </p>
       </div>
 
-      <!-- Research Thrusts -->
-      <section class="research-thrusts section-gap">
-        <h2>Research Thrusts</h2>
+      <!-- Research Aims -->
+      <section class="research-aims section-gap">
+        <h2>Research</h2>
 
-        <div class="thrust">
-          <div class="thrust-tag">Thrust 01</div>
+        <div class="aim">
+          <div class="aim-tag">Aim 01</div>
           <h3>Diagnosing biological structure in self-supervised genomic models</h3>
-          <p>Self-supervised genomic models achieve strong downstream performance, but we largely can't explain why. I develop frameworks to interpret what biological signals are actually encoded in learned representations — correlating attention patterns and gradient-based scores with known biological annotations (TATA boxes, transcription factor binding sites, evolutionary conservation). The goal isn't just to identify which heads do what post-hoc, but to understand how biological structure is acquired across training stages, and why it remains distributed and hard to fully interpret. That diagnosis directly motivates the work in Thrusts 2 and 3.</p>
+          <p>Self-supervised genomic models achieve strong downstream performance, but we largely can't explain why. I develop frameworks to interpret what biological signals are actually encoded in learned representations — correlating attention patterns and gradient-based scores with known biological annotations (TATA boxes, transcription factor binding sites, evolutionary conservation). The goal isn't just to identify which heads do what post-hoc, but to understand how biological structure is acquired across training stages, and why it remains distributed and hard to fully interpret. That diagnosis directly motivates the rest of my work.</p>
         </div>
 
-        <div class="thrust">
-          <div class="thrust-tag">Thrust 02</div>
+        <div class="aim">
+          <div class="aim-tag">Aim 02</div>
           <h3>Incorporating biological structure into pre-training objectives</h3>
-          <p>Standard language modeling objectives (next-token prediction, masked language modeling) were designed for natural language. Genomic sequences have a fundamentally different structure — evolutionary conservation, functional constraint, regulatory grammar. Rather than adapting NLP pre-training verbatim, I design objectives that treat biological structure as a training signal. My evolutionary rate prediction tasks (CEP and MEM) ask models to predict how fast each position evolves, explicitly incorporating the evolutionary constraints that define functional regions. These tasks are composable with sequence reconstruction objectives, improving representation quality on zero-shot biological benchmarks without requiring labeled data.</p>
+          <p>Standard language modeling objectives were designed for natural language. Genomic sequences have a fundamentally different structure — evolutionary conservation, functional constraint, regulatory grammar. Rather than adapting NLP pre-training verbatim, I design objectives that treat biological structure as a training signal. My evolutionary rate prediction tasks (CEP and MEM) ask models to predict how fast each position evolves, explicitly incorporating the evolutionary constraints that define functional regions. These tasks are composable with sequence reconstruction objectives, improving representation quality on zero-shot biological benchmarks without requiring labeled data.</p>
         </div>
 
-        <div class="thrust">
-          <div class="thrust-tag">Thrust 03</div>
-          <h3>Interpretability by design via multimodal alignment</h3>
-          <p>Post-hoc interpretability is inherently limited — you can characterize a black box, but you can't change what it learned. My third thrust asks whether we can build models that are interpretable by construction. Using contrastive learning, I align genomic sequences directly with their functional products: coding sequences to proteins, and regulatory DNA to gene expression. When the model must learn to bridge these modalities, cross-modal correspondences become part of the representation itself. I explore the role of biological inductive biases (initializing convolutional kernels with the genetic code, seeding with known enhancer motifs) in producing both performant and interpretable models.</p>
+        <div class="aim">
+          <div class="aim-tag">Aim 03</div>
+          <h3>Interpretability by design</h3>
+          <p>Post-hoc interpretability is inherently limited — you can characterize a black box, but you can't change what it learned. I'm interested in whether we can build models where interpretability is a property of the architecture itself, rather than something layered on afterward. This involves designing training objectives and inductive biases that ground representations in known biological relationships from the outset, so that what a model learns is legible by construction.</p>
         </div>
       </section>
 
