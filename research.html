@@ -1,77 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESEARCH</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Micaela Consens</title>
+  <meta name="description" content="Research by Micaela Consens on genome language model interpretability, biologically-informed pre-training, and multimodal genomic alignment.">
+  <meta name="author" content="Micaela Elisa Consens">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Research | Micaela Consens">
+  <meta property="og:description" content="Publications and talks on self-supervised learning for genomics, genome language model interpretability, and biological structure in pre-training.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@micaelanonsense">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <a class="nav-item" href="index.html">M.E.C.</a>
-            </div>
-            <div class="nav-right">
-                <a class="nav-item" href="research.html">RESEARCH</a>
-                <a class="nav-item" href="projects.html">PROJECTS</a>
-                <a class="nav-item" href="cv.html">CV</a>
-            </div>
-        </nav>
-    </header>    
-    <main>
-        <div class="content-box">
-            <div class="content">
-            <section class="research-interests">
-                <h1>Research Interests</h1>
-                <p> In general, I'm interested in machine learning as a tool to uncover novel signals in biology. I am equally interested in the design of these novel tools, and their exploration.
-                    Some of my work involves exploring the interpretability of genome language models to learn what signals are uncovered in un-supervised pre-training. Based on these findings, I'm also interested in designing biologically-motivated and downstream-task aligned unsupervised pre-training regimes to achieve more robust discovery of underlying biological signal.</p>
-            </section>
-            <section class="research-papers">
-                <h1>Papers</h1>
-                <ul>
-                    <li>
-                        <h3>2025 - Interpreting Attention Mechanisms in Genomic Transformer Models: A Framework for Biological Insights </h3>
-                        <p><a href="https://www.biorxiv.org/content/10.1101/2025.06.26.661544v1" target="_blank">bioRxiv</a></p>
-                        <p> Transformer models have shown strong performance on biological sequence prediction tasks, but the interpretability of their internal mechanisms remains underexplored. Given their application in biomedical research, understanding the mechanisms behind these models’ predictions is crucial for their widespread adoption. We introduce a method to interpret attention heads in genomic transformers by correlating per-token attention scores with curated biological annotations, and we use GPT-4 to summarize each head’s focus. Applying this to DNABERT, Nucleotide Transformer, and scGPT, we find that attention heads learn biologically meaningful associations during self-supervised pre-training and that these associations shift with fine-tuning. We show that interpretability varies with tokenization scheme, and that context-dependence plays a key role in head behaviour. Through ablation, we demonstrate that heads strongly associated with biological features are more important for task performance than uninformative heads in the same layers. In DNABERT trained for TATA promoter prediction, we observe heads with positive and negative associations reflecting positive and negative learning dynamics. Our results offer a framework to trace how biological features are learned from random initialization to pre-training to fine-tuning, enabling insight into how genomic foundation models represent nucleotides, genes, and cells. </p>
-                    </li>
-                    <li>
-                        <h3>2025 - Transformers and genome language models </h3>
-                        <p><a href="https://www.nature.com/articles/s42256-025-01007-9" target="_blank">Nature Machine Intelligence</a></p>
-                        <p> Large language models based on the transformer deep learning architecture have revolutionized natural language processing. Motivated by the analogy between human language and the genome’s biological code, researchers have begun to develop genome language models (gLMs) based on transformers and related architectures. This Review explores the use of transformers and language models in genomics. We survey open questions in genomics amenable to the use of gLMs, and motivate the use of gLMs and the transformer architecture for these problems. We discuss the potential of gLMs for modelling the genome using unsupervised pretraining tasks, specifically focusing on the power of zero- and few-shot learning. We explore the strengths and limitations of the transformer architecture, as well as the strengths and limitations of current gLMs more broadly. Additionally, we contemplate the future of genomic modelling beyond the transformer architecture, based on current trends in research. This Review serves as a guide for computational biologists and computer scientists interested in transformers and language models for genomic data. </p>
-                    </li>
-                    <li>
-                        <h3>2023 - Transforming Genomic Interpretability: A DNABERT Case Study </h3>
-                        <p><a href="https://icml-compbio.github.io/2023/papers/WCBICML2023_paper118.pdf" target="_blank">ICML 2023 Comp Bio Workshop Paper </a></p>
-                        <p> While deep learning algorithms, particularly transformers, have recently shown significant promise in making predictions from biological sequences, their interpretability in the context of biology has not been deeply explored. This paper focuses on the recently proposed DNABERT model and explores interpreting it’s decisions using modified Layer-wise Relevance Propagation (LRP) methods to determine what the model is learning. This score is then compared to several other interpretability methods commonly applied to transformers, including the attention-score based method proposed by the DNABERT authors. Results of mutagenesis experiments targeting regions identified by different methods show the modified LRP interpretability scores can outperform others at 20 mutations, and also show attention cannot reliably outperform random scores.</p>
-                    </li>
-                    <li>
-                        <h3>2022 - Bulk and single-nucleus transcriptomics highlight intra-telencephalic and somatostatin neurons in Alzheimer’s disease</h3>
-                        <p><a href="https://www.frontiersin.org/journals/molecular-neuroscience/articles/10.3389/fnmol.2022.903175/full" target="_blank">Frontiers in Molecular Neuroscience </a></p>
-                        <p> Cortical neuron loss is a pathological hallmark of late-onset Alzheimer’s disease (AD). However, it remains unclear which neuronal subtypes beyond broad excitatory and inhibitory classes are most vulnerable. Here, we analyzed cell subtype proportion differences in AD compared to non-AD controls using 1037 post-mortem brain samples from six neocortical regions. We identified the strongest associations of AD with fewer somatostatin (SST) inhibitory neurons and intra-telencephalic (IT) excitatory neurons. Replication in three AD case-control single-nucleus RNAseq datasets most strongly supported the bulk tissue association of fewer SST neurons in AD. In depth analyses of cell type proportions with specific AD-related neuropathological and cognitive phenotypes revealed fewer SST neurons with greater brain-wide post-mortem tau and beta amyloid, as well as a faster rate of antemortem cognitive decline. In contrast, greater IT neuron proportions were associated with a slower rate of cognitive decline as well as greater residual cognition–a measure of cognitive resilience–but not canonical AD neuropathology. Our findings implicate somatostatin inhibitory and intra-telencephalic excitatory neuron subclasses in the pathogenesis of AD and in cognitive resilience to AD pathology, respectively.</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="talks">
-                <h1>Invited Talks</h1>
-                <ul>
-                    <li>
-                        <h3>2025 - Genome Language Models at Google Genomics</h3>
-                        <p><a href="https://drive.google.com/file/d/1asCBd6nQbZArTi4A-LV-T0iNX5lgIiVo/view?ts=68adfec3&pli=1" target="_blank">Watch here</a></p>
-                    </li>
-                    <li>
-                        <h3>2024 - Genome Language Models at Harvard</h3>
-                        <p><a href="https://www.youtube.com/watch?v=mYzKb8Sox6k" target="_blank">Watch here</a></p>
-                    </li>
-                    <li>
-                        <h3>2023 - Transforming Genomic Interpretability at T-CAIREM Trainee Rounds</h3>
-                        <p><a href="https://www.youtube.com/watch?v=8VGn_3pLzNA&t=459s" target="_blank">Watch here</a></p>
-                    </li>
-                </ul>
-            </section>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html">M.E.C.</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-right').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-right">
+        <a class="nav-item active" href="research.html">RESEARCH</a>
+        <a class="nav-item" href="projects.html">PROJECTS</a>
+        <a class="nav-item" href="cv.html">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Research</h1>
+        <p>My work sits at the intersection of machine learning and genomics. The central question I keep returning to: <em>can we build self-supervised genomic models that encode interpretable biological structure, rather than operating as black boxes that require extensive fine-tuning to work?</em> The three research thrusts below represent my approach to answering it.</p>
+        <p style="margin-top:0.5rem;margin-bottom:0;">
+          <a href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">View full publication list on Google Scholar →</a>
+        </p>
+      </div>
+
+      <!-- Research Thrusts -->
+      <section class="research-thrusts section-gap">
+        <h2>Research Thrusts</h2>
+
+        <div class="thrust">
+          <div class="thrust-tag">Thrust 01</div>
+          <h3>Diagnosing biological structure in self-supervised genomic models</h3>
+          <p>Self-supervised genomic models achieve strong downstream performance, but we largely can't explain why. I develop frameworks to interpret what biological signals are actually encoded in learned representations — correlating attention patterns and gradient-based scores with known biological annotations (TATA boxes, transcription factor binding sites, evolutionary conservation). The goal isn't just to identify which heads do what post-hoc, but to understand how biological structure is acquired across training stages, and why it remains distributed and hard to fully interpret. That diagnosis directly motivates the work in Thrusts 2 and 3.</p>
         </div>
+
+        <div class="thrust">
+          <div class="thrust-tag">Thrust 02</div>
+          <h3>Incorporating biological structure into pre-training objectives</h3>
+          <p>Standard language modeling objectives (next-token prediction, masked language modeling) were designed for natural language. Genomic sequences have a fundamentally different structure — evolutionary conservation, functional constraint, regulatory grammar. Rather than adapting NLP pre-training verbatim, I design objectives that treat biological structure as a training signal. My evolutionary rate prediction tasks (CEP and MEM) ask models to predict how fast each position evolves, explicitly incorporating the evolutionary constraints that define functional regions. These tasks are composable with sequence reconstruction objectives, improving representation quality on zero-shot biological benchmarks without requiring labeled data.</p>
+        </div>
+
+        <div class="thrust">
+          <div class="thrust-tag">Thrust 03</div>
+          <h3>Interpretability by design via multimodal alignment</h3>
+          <p>Post-hoc interpretability is inherently limited — you can characterize a black box, but you can't change what it learned. My third thrust asks whether we can build models that are interpretable by construction. Using contrastive learning, I align genomic sequences directly with their functional products: coding sequences to proteins, and regulatory DNA to gene expression. When the model must learn to bridge these modalities, cross-modal correspondences become part of the representation itself. I explore the role of biological inductive biases (initializing convolutional kernels with the genetic code, seeding with known enhancer motifs) in producing both performant and interpretable models.</p>
+        </div>
+      </section>
+
+      <!-- Papers -->
+      <section class="papers-section section-gap">
+        <h2>Publications</h2>
+
+        <div class="paper-card">
+          <div class="paper-meta">
+            <span class="paper-year">2025</span>
+            <span class="paper-venue">bioRxiv</span>
+          </div>
+          <h3>Interpreting Attention Mechanisms in Genomic Transformer Models: A Framework for Biological Insights</h3>
+          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
+          <div class="abstract-body">
+            <p class="paper-abstract">Transformer models have shown strong performance on biological sequence prediction tasks, but the interpretability of their internal mechanisms remains underexplored. Given their application in biomedical research, understanding the mechanisms behind these models' predictions is crucial for their widespread adoption. We introduce a method to interpret attention heads in genomic transformers by correlating per-token attention scores with curated biological annotations, and we use GPT-4 to summarize each head's focus. Applying this to DNABERT, Nucleotide Transformer, and scGPT, we find that attention heads learn biologically meaningful associations during self-supervised pre-training and that these associations shift with fine-tuning. We show that interpretability varies with tokenization scheme, and that context-dependence plays a key role in head behaviour. Through ablation, we demonstrate that heads strongly associated with biological features are more important for task performance than uninformative heads in the same layers. In DNABERT trained for TATA promoter prediction, we observe heads with positive and negative associations reflecting positive and negative learning dynamics. Our results offer a framework to trace how biological features are learned from random initialization to pre-training to fine-tuning, enabling insight into how genomic foundation models represent nucleotides, genes, and cells.</p>
+          </div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://www.biorxiv.org/content/10.1101/2025.06.26.661544v1" target="_blank" rel="noopener">bioRxiv</a>
+          </div>
+        </div>
+
+        <div class="paper-card">
+          <div class="paper-meta">
+            <span class="paper-year">2025</span>
+            <span class="paper-venue">Nature Machine Intelligence</span>
+          </div>
+          <h3>Transformers and genome language models</h3>
+          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
+          <div class="abstract-body">
+            <p class="paper-abstract">Large language models based on the transformer deep learning architecture have revolutionized natural language processing. Motivated by the analogy between human language and the genome's biological code, researchers have begun to develop genome language models (gLMs) based on transformers and related architectures. This Review explores the use of transformers and language models in genomics. We survey open questions in genomics amenable to the use of gLMs, and motivate the use of gLMs and the transformer architecture for these problems. We discuss the potential of gLMs for modelling the genome using unsupervised pretraining tasks, specifically focusing on the power of zero- and few-shot learning. We explore the strengths and limitations of the transformer architecture, as well as the strengths and limitations of current gLMs more broadly. Additionally, we contemplate the future of genomic modelling beyond the transformer architecture, based on current trends in research. This Review serves as a guide for computational biologists and computer scientists interested in transformers and language models for genomic data.</p>
+          </div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://www.nature.com/articles/s42256-025-01007-9" target="_blank" rel="noopener">Nature Machine Intelligence</a>
+          </div>
+        </div>
+
+        <div class="paper-card">
+          <div class="paper-meta">
+            <span class="paper-year">2023</span>
+            <span class="paper-venue">ICML CompBio Workshop</span>
+          </div>
+          <h3>Transforming Genomic Interpretability: A DNABERT Case Study</h3>
+          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
+          <div class="abstract-body">
+            <p class="paper-abstract">While deep learning algorithms, particularly transformers, have recently shown significant promise in making predictions from biological sequences, their interpretability in the context of biology has not been deeply explored. This paper focuses on the recently proposed DNABERT model and explores interpreting its decisions using modified Layer-wise Relevance Propagation (LRP) methods to determine what the model is learning. This score is then compared to several other interpretability methods commonly applied to transformers, including the attention-score based method proposed by the DNABERT authors. Results of mutagenesis experiments targeting regions identified by different methods show the modified LRP interpretability scores can outperform others at 20 mutations, and also show attention cannot reliably outperform random scores.</p>
+          </div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://icml-compbio.github.io/2023/papers/WCBICML2023_paper118.pdf" target="_blank" rel="noopener">Workshop Paper</a>
+          </div>
+        </div>
+
+        <div class="paper-card">
+          <div class="paper-meta">
+            <span class="paper-year">2022</span>
+            <span class="paper-venue">Frontiers in Molecular Neuroscience</span>
+          </div>
+          <h3>Bulk and single-nucleus transcriptomics highlight intra-telencephalic and somatostatin neurons in Alzheimer's disease</h3>
+          <button class="abstract-toggle" onclick="toggleAbstract(this)">Show abstract ↓</button>
+          <div class="abstract-body">
+            <p class="paper-abstract">Cortical neuron loss is a pathological hallmark of late-onset Alzheimer's disease (AD). However, it remains unclear which neuronal subtypes beyond broad excitatory and inhibitory classes are most vulnerable. Here, we analyzed cell subtype proportion differences in AD compared to non-AD controls using 1037 post-mortem brain samples from six neocortical regions. We identified the strongest associations of AD with fewer somatostatin (SST) inhibitory neurons and intra-telencephalic (IT) excitatory neurons. Replication in three AD case-control single-nucleus RNAseq datasets most strongly supported the bulk tissue association of fewer SST neurons in AD. In depth analyses of cell type proportions with specific AD-related neuropathological and cognitive phenotypes revealed fewer SST neurons with greater brain-wide post-mortem tau and beta amyloid, as well as a faster rate of antemortem cognitive decline. In contrast, greater IT neuron proportions were associated with a slower rate of cognitive decline as well as greater residual cognition — a measure of cognitive resilience — but not canonical AD neuropathology. Our findings implicate somatostatin inhibitory and intra-telencephalic excitatory neuron subclasses in the pathogenesis of AD and in cognitive resilience to AD pathology, respectively.</p>
+          </div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://www.frontiersin.org/journals/molecular-neuroscience/articles/10.3389/fnmol.2022.903175/full" target="_blank" rel="noopener">Frontiers</a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Talks -->
+      <section class="talks-section">
+        <h2>Invited Talks</h2>
+
+        <div class="talk-item">
+          <span class="talk-year">2025</span>
+          <div class="talk-info">
+            <h3>Genome Language Models at Google Genomics</h3>
+            <p><a href="https://drive.google.com/file/d/1asCBd6nQbZArTi4A-LV-T0iNX5lgIiVo/view?ts=68adfec3&pli=1" target="_blank" rel="noopener">Watch recording →</a></p>
+          </div>
+        </div>
+
+        <div class="talk-item">
+          <span class="talk-year">2024</span>
+          <div class="talk-info">
+            <h3>Genome Language Models at Harvard</h3>
+            <p><a href="https://www.youtube.com/watch?v=mYzKb8Sox6k" target="_blank" rel="noopener">Watch recording →</a></p>
+          </div>
+        </div>
+
+        <div class="talk-item">
+          <span class="talk-year">2023</span>
+          <div class="talk-info">
+            <h3>Transforming Genomic Interpretability at T-CAIREM Trainee Rounds</h3>
+            <p><a href="https://www.youtube.com/watch?v=8VGn_3pLzNA&t=459s" target="_blank" rel="noopener">Watch recording →</a></p>
+          </div>
+        </div>
+
+      </section>
+
     </div>
-    </main>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Micaela Elisa Consens · University of Toronto</span>
+      <div class="footer-links">
+        <a href="mailto:micaela.consens@mail.utoronto.ca">Email</a>
+        <a href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/meconsens" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com/micaelanonsense" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/in/micaela-consens/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleAbstract(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.toggle('open');
+      btn.textContent = isOpen ? 'Hide abstract ↑' : 'Show abstract ↓';
+    }
+  </script>
 </body>
 </html>

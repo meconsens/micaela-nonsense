@@ -1,36 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micaela Consens | AI & Genomics Researcher | University of Toronto</title>
+  <meta name="description" content="Micaela Consens is a PhD candidate at the University of Toronto developing methods to incorporate biological structure into self-supervised genomic models — improving interpretability and generalization of genome language models.">
+  <meta name="author" content="Micaela Elisa Consens">
+  <meta name="keywords" content="genomics, machine learning, genome language models, bioinformatics, self-supervised learning, interpretability, University of Toronto">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Micaela Consens | AI & Genomics Researcher">
+  <meta property="og:description" content="PhD candidate at the University of Toronto working at the intersection of AI and genomics — genome language model interpretability, biologically-informed pre-training, and multimodal alignment.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@micaelanonsense">
+  <meta name="twitter:title" content="Micaela Consens | AI & Genomics Researcher">
+  <meta name="twitter:description" content="PhD candidate at U of T. Genome language model interpretability, biologically-informed pre-training, multimodal genomic alignment.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Micaela Elisa Consens",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of Toronto"
+    },
+    "url": "https://meconsens.github.io",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en",
+      "https://github.com/meconsens",
+      "https://twitter.com/micaelanonsense",
+      "https://www.linkedin.com/in/micaela-consens/"
+    ],
+    "email": "micaela.consens@mail.utoronto.ca",
+    "description": "PhD candidate at the University of Toronto researching self-supervised learning for genomics, genome language model interpretability, and biologically-informed pre-training."
+  }
+  </script>
+</head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <a class="nav-item" href="index.html">M.E.C.</a>
-            </div>
-            <div class="nav-right">
-                <a class="nav-item" href="research.html">RESEARCH</a>
-                <a class="nav-item" href="projects.html">PROJECTS</a>
-                <a class="nav-item" href="cv.html">CV</a>
-            </div>
-        </nav>
-    </header>    
-    <main>
-        <div class="content">
-            <div class="profile">
-                <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
-                <div class="profile-info">
-                    <h1>Micaela Elisa Consens</h1>
-                    <h2>Ph.D. Candidate in Computer Science at the University of Toronto (Moses and Wang lab)</h2>
-                    <p>I completed my undergrad in Computer Science, Bioinformatics and Biology at U of T in June 2021. I am currently a Computer Science Ph.D. candidate at U of T with a Focus in Machine Learning Applications for Healthcare in the Moses and Wang Lab. I'm interested in machine learning as a tool to investigate biological questions surrounding human molecular machinery and how we are ‘built’.</p>
-                </div>
-            </div>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html">M.E.C.</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-right').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-right">
+        <a class="nav-item" href="research.html">RESEARCH</a>
+        <a class="nav-item" href="projects.html">PROJECTS</a>
+        <a class="nav-item" href="cv.html">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+
+      <!-- Profile -->
+      <section class="profile">
+        <img src="images/profile.png" alt="Micaela Consens — PhD Candidate, University of Toronto" class="profile-pic">
+        <div class="profile-info">
+          <h1>Micaela Elisa Consens</h1>
+          <p class="profile-tagline">PhD Candidate · Computer Science · University of Toronto</p>
+          <p>I'm a Computer Science PhD candidate at the University of Toronto (Moses and Wang labs) working at the intersection of machine learning and genomics. My research asks: <em>can we build genomic models that don't just perform well, but actually encode interpretable biological structure?</em></p>
+          <p>I develop methods to interpret what genome language models learn during self-supervised pre-training, design biologically-motivated pre-training objectives, and build multimodal frameworks that align genomic sequences to their functional products.</p>
+          <div class="profile-social">
+            <a class="social-link" href="mailto:micaela.consens@mail.utoronto.ca">EMAIL</a>
+            <a class="social-link" href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">SCHOLAR</a>
+            <a class="social-link" href="https://github.com/meconsens" target="_blank" rel="noopener">GITHUB</a>
+            <a class="social-link" href="https://twitter.com/micaelanonsense" target="_blank" rel="noopener">X / TWITTER</a>
+            <a class="social-link" href="https://www.linkedin.com/in/micaela-consens/" target="_blank" rel="noopener">LINKEDIN</a>
+          </div>
         </div>
-    </main>
+      </section>
+
+      <!-- Highlights -->
+      <section class="highlights">
+        <h2>Highlights</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="label">Publication</div>
+            <p>Transformers and genome language models — <em>Nature Machine Intelligence</em> 2025</p>
+          </div>
+          <div class="highlight-card">
+            <div class="label">Invited Talk</div>
+            <p>Genome Language Models at Google Genomics, 2025</p>
+          </div>
+          <div class="highlight-card">
+            <div class="label">Fellowship</div>
+            <p>NSERC CGS-D Scholar — $118,333 awarded on academic merit &amp; research</p>
+          </div>
+          <div class="highlight-card">
+            <div class="label">Industry</div>
+            <p>Microsoft Research Intern, ML for Biology &amp; Healthcare, 2024</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Pillars -->
+      <section class="pillars">
+        <h2>Research Focus</h2>
+        <div class="pillar-list">
+          <div class="pillar">
+            <span class="pillar-num">01</span>
+            <div class="pillar-text">
+              <h3>Interpreting genome language models</h3>
+              <p>Characterizing what biological structures are encoded in self-supervised representations — from random initialization through pre-training and fine-tuning — using attention and gradient-based methods.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">02</span>
+            <div class="pillar-text">
+              <h3>Biologically-informed pre-training</h3>
+              <p>Designing pre-training objectives (evolutionary rate prediction, masked evolution modeling) that incorporate biological structure as a training signal, producing more generalizable and interpretable representations.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">03</span>
+            <div class="pillar-text">
+              <h3>Multimodal genomic alignment</h3>
+              <p>Building contrastive learning frameworks that align genomic sequences with their functional products — coding sequences to proteins, regulatory DNA to expression — to create representations that are interpretable by design.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Micaela Elisa Consens · University of Toronto</span>
+      <div class="footer-links">
+        <a href="mailto:micaela.consens@mail.utoronto.ca">Email</a>
+        <a href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/meconsens" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com/micaelanonsense" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/in/micaela-consens/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
