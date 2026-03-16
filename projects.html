@@ -1,72 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Micaela Consens</title>
+  <meta name="description" content="Projects by Micaela Consens — from privacy-preserving ML on DNA sequence to community apps and COVID research tools.">
+  <meta name="author" content="Micaela Elisa Consens">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects | Micaela Consens">
+  <meta property="og:description" content="Selected projects spanning ML for genomics, blockchain privacy, community tech, and scientific communication.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@micaelanonsense">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <a class="nav-item" href="index.html">M.E.C.</a>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html">M.E.C.</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-right').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-right">
+        <a class="nav-item" href="research.html">RESEARCH</a>
+        <a class="nav-item active" href="projects.html">PROJECTS</a>
+        <a class="nav-item" href="cv.html">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+
+      <div class="page-header">
+        <h1>Projects</h1>
+        <p>A selection of projects spanning machine learning for genomics, privacy-preserving computation, community technology, and scientific communication.</p>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- PromoterFinder -->
+        <article class="project-card">
+          <div class="project-body">
+            <div class="project-images">
+              <img src="images/promoterfinder.png" alt="PromoterFinder — DNABERT-based dApp for promoter identification">
             </div>
-            <div class="nav-right">
-                <a class="nav-item" href="research.html">RESEARCH</a>
-                <a class="nav-item" href="projects.html">PROJECTS</a>
-                <a class="nav-item" href="cv.html">CV</a>
+            <div class="project-content">
+              <div class="project-tag">ML · Genomics · Blockchain</div>
+              <h2>PromoterFinder</h2>
+              <h3>A privacy-forward dApp for machine learning on DNA sequence</h3>
+              <p>Transformers are increasingly capable tools for genomics, but deploying them raises real privacy concerns around sensitive DNA data. In this project, I fine-tuned a mini-DNABERT model for proximal and core promoter region identification, then built a dApp on the Oasis Blockchain to host it — enabling users to run predictions on their own sequence data in a confidentiality-preserving manner. The project also benchmarks Cipher ParaTime vs Parcel-hosted models for private ML inference.</p>
             </div>
-        </nav>
-    </header>    
-    <main>
-        <div class="content-box">
-            <div class="content">
-            <section class="project">
-                <h2>PromoterFinder</h2>
-                <div class="project-info">
-                    <img src="images/promoterfinder.png" alt="PromoterFinder Photo">
-                    <div>
-                        <h3>A Privacy-Forward Oasis-based dApp for Machine Learning on DNA sequence or PromoterFinder.</h3>
-                        <p>Transformers are becoming increasingly popular tools, but they are not always available to query online. Even if they were, how would you ensure the privacy of inputted DNA data? In this project, we fine-tuned a mini-DNABERT model for proximal and core promoter region identification. Next, we built a dApp, on the Oasis Blockchain platform to host the mini-DNABERT model. This allows users to make predictions on inputted user data in a confidentiality-preserving manner. Next we compared running ML models with the Cipher ParaTime vs Parcel hosted models.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="project">
-                <h2>Pocketchange</h2>
-                <div class="project-info">
-                    <img src="images/pchange.png" alt="Pocketchange Photo">
-                    <img src="images/pchange2.png" alt="Pocketchange Photo">
-                    <div>
-                        <h3>A Community-loyalty App</h3>
-                        <p>Pocketchange is an application for engaging in the PocketChange digital neighbourhood marketplaces in Toronto. The app supports making and receiving payments, earning rewards, and participating in local contests within a Toronto neighbourhood. This was a startup project that received the Young Entrepreneurship Scholarship (YES) Award at the University of Toronto (valued $10,000).</p>
-                    </div>
-                </div>
-            </section>
-            <section class="project">
-                <h2>P4P</h2>
-                <div class="project-info project-info">
-                    <img src="images/p4p1.png" alt="P4P Photo">
-                    <img src="images/p4p2.png" alt="P4P Photo">
-                    <div>
-                        <h3>Publications for the Public</h3>
-                        <p>It's hard to read and understand scientific literature, even for undergraduate students in life sciences/computer sciences. We wanted to create a quick way for people absorb new research relevant to the ongoing pandemic. This webpage provides a summary of all recent COVID-19 publications around the world and filters them by keywords associated with the publication type, that are of relevance to the general public. Also shows the trajectory of publication keywords over time in an interactive graph.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="project">
-                <h2>CellTypeTool</h2>
-                <div class="project-info">
-                    <img src="images/celltypetool.png" alt="CellTypeTool Photo">
-                    <div>
-                        <h3>Bulk RNAseq De-convolution</h3>
-                        <p>The goal of CellTyPETool is to facilitate research that requires deconvolution of bulk-tissue RNAseq data. The package can be used to generate cell type proportion estimations from bulk-tissue RNAseq using two different validated methods, markerGeneProfile and BRETIGEA. While other R packages have been published that calculate cell type proportions (McKenzie et al, 2018; Mancarci et al., 2017), they only offer their own analysis and not a comparison between, nor do they offer visualizations between cell-type proportions associations with disease or other important phenotypes. Additionally, they don’t offer simple way to check which marker genes were incorporated in the cell-type proportion calculation.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        </div>
-    </main>
+          </div>
+        </article>
+
+        <!-- CellTypeTool -->
+        <article class="project-card">
+          <div class="project-body">
+            <div class="project-images">
+              <img src="images/celltypetool.png" alt="CellTypeTool — R package for bulk RNAseq deconvolution">
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Bioinformatics · R Package</div>
+              <h2>CellTypeTool</h2>
+              <h3>Bulk RNAseq deconvolution</h3>
+              <p>An R package for estimating cell type proportions from bulk-tissue RNAseq data using two validated methods: markerGeneProfile and BRETIGEA. Unlike existing packages that only offer their own analysis, CellTypeTool enables direct comparison between methods, visualization of cell-type proportion associations with disease phenotypes, and inspection of which marker genes were incorporated in each calculation.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pocketchange -->
+        <article class="project-card">
+          <div class="project-body">
+            <div class="project-images">
+              <img src="images/pchange.png" alt="Pocketchange app screenshot 1">
+              <img src="images/pchange2.png" alt="Pocketchange app screenshot 2">
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Startup · Mobile App</div>
+              <h2>Pocketchange</h2>
+              <h3>A community loyalty app — YES Award recipient ($10,000)</h3>
+              <p>Pocketchange is an application for engaging in digital neighbourhood marketplaces in Toronto. The app supports making and receiving payments, earning rewards, and participating in local contests within a neighbourhood. This startup project received the Young Entrepreneurship Scholarship (YES) Award at the University of Toronto, valued at $10,000.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- P4P -->
+        <article class="project-card">
+          <div class="project-body">
+            <div class="project-images">
+              <img src="images/p4p1.png" alt="P4P — Publications for the Public screenshot 1">
+              <img src="images/p4p2.png" alt="P4P — Publications for the Public screenshot 2">
+            </div>
+            <div class="project-content">
+              <div class="project-tag">Science Communication · Web App</div>
+              <h2>P4P</h2>
+              <h3>Publications for the Public</h3>
+              <p>Scientific literature is hard to read and understand — even for undergrads in life sciences. P4P provides a summary of recent COVID-19 publications, filterable by keywords associated with publication type, aimed at making new research accessible to the general public. It also includes an interactive graph showing the trajectory of publication keywords over time.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Micaela Elisa Consens · University of Toronto</span>
+      <div class="footer-links">
+        <a href="mailto:micaela.consens@mail.utoronto.ca">Email</a>
+        <a href="https://scholar.google.com/citations?user=gPKUewcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/meconsens" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com/micaelanonsense" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/in/micaela-consens/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
